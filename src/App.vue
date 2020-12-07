@@ -1,10 +1,19 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+  <div id="app">
+    <UserProfile />
   </div>
-  <router-view/>
 </template>
+
+<script>
+import UserProfile from "./components/UserProfile";
+
+export default {
+  name: "App",
+  components: {
+    UserProfile
+  }
+};
+</script>
 
 <style lang="scss">
 #app {
@@ -17,7 +26,6 @@
 
 #nav {
   padding: 30px;
-
   a {
     font-weight: bold;
     color: #2c3e50;
